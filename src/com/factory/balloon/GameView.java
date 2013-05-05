@@ -60,10 +60,10 @@ public class GameView extends SurfaceView{
 	public void prepareUI(){
 		Options options = new Options();
 		options.inPreferredConfig = Bitmap.Config.RGB_565;
-		
+
 		animation = new BalloonAnimation(480, 800);
-		animation.setBallonBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.balloon, options));
-		animation.setBallonDestroyedBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.balloonexplosion, options));
+		animation.setBallonBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.balloonnoalpha, options));
+		animation.setBallonDestroyedBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.balloonexplosionnoalpha, options));
 		animation.setBitmapProperties(0, 1, 1);
 		animation.setBitmapProperties(1, 2, 4);
 		animation.generateBallons();

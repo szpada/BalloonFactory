@@ -30,7 +30,7 @@ public class BalloonAnimation {
 	private Random random;
 	
 	//balloons quantity
-	private static final int balloonQuota = 20;
+	private static final int balloonQuota = 30;
 	
 	//balloon speed (1 - balloonSpeed)
 	private static final int balloonSpeed = 8;
