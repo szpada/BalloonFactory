@@ -115,7 +115,8 @@ public class BalloonAnimation {
 	public void onDraw(Canvas canvas, Paint paint){
 		int size = balloons.size();
 		for(int i = 0; i < size; i++){
-			drawSprite(canvas, paint, balloons.get(i).getX(), balloons.get(i).getY(), balloons.get(i).isDead(), balloons.get(i).getCurrentFrame(), 0, 1.0f, 255);
+			DestructibleBalloon currentballoon = balloons.get(i);
+			drawSprite(canvas, paint, currentballoon.getX(), currentballoon.getY(), currentballoon.isDead(), currentballoon.getCurrentFrame(), 0, 1.0f, 255, currentballoon.getBalloonType());
 			//paint.setColor(Color.GRAY);
 			//canvas.drawRect(balloons.get(i).getX(), balloons.get(i).getY(), balloons.get(i).getX() + balloons.get(i).getWidth(), balloons.get(i).getY() + balloons.get(i).getHeight(), paint);
 		}
@@ -127,7 +128,7 @@ public class BalloonAnimation {
 		return false;
 	}
 	
-	public void drawSprite(Canvas canvas, Paint paint, int x, int y, boolean dead, int currentFrame, float angle, float scale, int alpha){
+	public void drawSprite(Canvas canvas, Paint paint, int x, int y, boolean dead, int currentFrame, float angle, float scale, int alpha, int type){
 
 		int columns;
 		int rows;
@@ -181,7 +182,8 @@ public class BalloonAnimation {
 
 //		paint.setAntiAlias(true); //spowalnia tak samo jak alpha?
 //		paint.setAlpha(alpha); //spowalnia, ale niewiele, bez alfy z pelnym ekranem balonow tez jest spowolnione
-
+		
+		//zamkniete w ifie do rodzaju balonu?
 		if(dead) canvas.drawBitmap(balloonDestroyed, src, dst, paint);
 		else canvas.drawBitmap(balloon, src, dst, paint);
 
