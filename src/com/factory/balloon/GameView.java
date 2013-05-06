@@ -62,6 +62,8 @@ public class GameView extends SurfaceView{
 		options.inPreferredConfig = Bitmap.Config.RGB_565;
 
 		animation = new BalloonAnimation(480, 800);
+//		animation.setBallonBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.balloon, options));
+//		animation.setBallonDestroyedBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.balloonexplosion, options));
 		animation.setBallonBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.balloonnoalpha, options));
 		animation.setBallonDestroyedBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.balloonexplosionnoalpha, options));
 		animation.setBitmapProperties(0, 1, 1);
@@ -88,6 +90,8 @@ public class GameView extends SurfaceView{
 	
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
+		//rozbudowac? pekanie tylko na pojedynczym dotknieciu a nie na przejechaniu palcem (albo na odwrot - tzn tak jak we frut nindzy?)
+		
 		int touchInd = event.getActionIndex();
 		float x, y;
 		x = event.getX(touchInd)/ this.w_factor;

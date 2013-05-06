@@ -21,6 +21,9 @@ public class DestructibleBalloon {
 	//max frames
 	private int frames;
 	
+	//type of a balloon (i.e. good/bad, etc.)
+	private int balloonType;
+	
 	public DestructibleBalloon(int x, int y, int speed){
 		this.x = x;
 		this.y = y;
@@ -31,6 +34,8 @@ public class DestructibleBalloon {
 		this.speed = speed;
 		
 		this.dead = false;
+		
+		this.balloonType = 0; //default?
 	}
 	
 	public void move(int randomMove){
@@ -123,5 +128,19 @@ public class DestructibleBalloon {
 
 	public void setFrames(int frames) {
 		this.frames = frames;
+	}
+
+	/**
+	 * @return the balloonType
+	 */
+	public int getBalloonType() {
+		return balloonType;
+	}
+
+	/**
+	 * @param balloonType the balloonType to set
+	 */
+	public void setBalloonType(int balloonType) {
+		this.balloonType = balloonType;
 	}
 }

@@ -59,7 +59,7 @@ public class BalloonAnimation {
 		for(int i = 0; i < balloonQuota; i++){
 			DestructibleBalloon blln = new DestructibleBalloon(random.nextInt(width), this.height + random.nextInt(height), random.nextInt(balloonSpeed) + 1);
 			
-			//change width with heigh because image is rotated
+			//change width with height because image is rotated
 			//blln.setHeight(balloon.getWidth());
 			//blln.setWidth(balloon.getHeight());
 			
@@ -179,8 +179,8 @@ public class BalloonAnimation {
 
 		Rect dst = new Rect(x, y, x + width, y + height);
 
-		//paint.setAntiAlias(true);
-		//paint.setAlpha(alpha);
+//		paint.setAntiAlias(true); //spowalnia tak samo jak alpha?
+//		paint.setAlpha(alpha); //spowalnia, ale niewiele, bez alfy z pelnym ekranem balonow tez jest spowolnione
 
 		if(dead) canvas.drawBitmap(balloonDestroyed, src, dst, paint);
 		else canvas.drawBitmap(balloon, src, dst, paint);
