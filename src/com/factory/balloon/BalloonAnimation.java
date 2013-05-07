@@ -183,7 +183,23 @@ public class BalloonAnimation {
 //		paint.setAntiAlias(true); //spowalnia tak samo jak alpha?
 //		paint.setAlpha(alpha); //spowalnia, ale niewiele, bez alfy z pelnym ekranem balonow tez jest spowolnione
 		
-		//zamkniete w ifie do rodzaju balonu?
+		//zamkniete w ifie do rodzaju balonu? Nie rozumiem pytania? W ogóle ciekawy sposób na komunikacje
+		//pisaæ komenty gdzieœ w dupie hahahaha
+		//pewnie tego nie przeczytasz w ogole wiec pozwole sobie na wklejenie fragmentu piosenki.
+		/****************************************************
+		997 ten numer to k³opoty
+		Gdy wydarzy sie incydent to pojawia sie konfident
+		Dzwoni 997 i wszystkich sprzedaje
+		Przyjezdzaj¹ kurwy, menty, jebane suki
+		Smiecie, psy, pierdolone kupy gowna
+		Wygarnac do nich z gana, to moje marzenie
+		Pierdole konsekwencje, areszty i wiezienie
+		Jak siedziec to kurwa za cos konkretnego
+		Sprz¹tneles psa, nie pierdolisz siê kolego
+		Ladujesz w areszcie, masz ich wszystkich w dupie
+		Pierdolimy policje i trzymamy siê w kupie 
+		****************************************************/
+		//TYLKO PEJAAAA KURWAAAA
 		if(dead) canvas.drawBitmap(balloonDestroyed, src, dst, paint);
 		else canvas.drawBitmap(balloon, src, dst, paint);
 
