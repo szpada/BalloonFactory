@@ -98,7 +98,8 @@ public class GameView extends SurfaceView{
 		y = event.getY(touchInd) / this.h_factor;
 		
 		//check balloon collision
-		animation.chechCollision((int)x, (int)y);
+		if(event.getAction() == MotionEvent.ACTION_DOWN)
+				animation.chechCollision((int)x, (int)y);
 		
 		return true;
 	}
